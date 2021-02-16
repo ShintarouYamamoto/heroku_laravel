@@ -1,0 +1,58 @@
+a {
+    text-decoration: none;
+    color: #000000;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+.card {
+    margin: 30px auto;
+    width: 300px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+.image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #faf437;
+    vertical-align: middle;
+}
+.profile-image {
+    margin: 5px 5px 5px 5px;
+}
+.name {
+    font-weight: bold;
+}
+.card-header-university {
+    background-color: #faf437;
+    display: flex;
+    justify-content: center;
+}
+.university {
+    font-weight: bold;
+    margin: 6px 0;
+}
+.text {
+    display: flex;
+    justify-content: center;
+}
+.help {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 20px 15px;
+}
+.desire {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 20px 15px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+

@@ -1,0 +1,72 @@
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    background-color: #faf437;
+    padding: 8px 16px;
+    font-size: 13px;
+    border-style: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    outline: none;
+}
+.button:hover {
+    color: black;
+    background-color: #979326;
+}
+.card-message {
+    margin: 30px auto;
+    width: 600px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+.card-message-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.card-message-body p {
+    display: inline-block;
+    font-size: medium;
+    font-weight: normal;
+    margin-right: 8px;
+}
+.message {
+    background-color: #faf437;
+    border-radius: 20%;
+    padding: 5px;
+}
+.card-message-body img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #faf437;
+    vertical-align: middle;
+}
+.card-input {
+    width: 500px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+.card-input-body {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.card-input-body button {
+    display: block;
+}
+.form-text {
+    width: 480px;
+    padding: 5px;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}

@@ -1,0 +1,156 @@
+.card {
+    margin: 30px auto;
+    width: 850px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
+.card-title {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+.card-body {
+    padding: 20px 0;
+   
+}
+.inline-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.image {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    border: 7px solid #faf437;
+    margin-left: 20px;
+}
+.infomation {
+    margin: 20px 0 0 20px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.follow{
+    font-size: large;
+}
+.follow-list{
+    text-decoration: none;
+    color: black;
+}
+
+.edit-button {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    background-color: #faf437;
+    padding: 10px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.edit-button:hover {
+    color: black;
+    background-color: #979326;
+}
+.logout-button {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    background-color: #faf437;
+    padding: 10px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.logout-button:hover {
+    color: black;
+    background-color: #979326;
+}
+.follow-button {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    background-color: #faf437;
+    padding: 10px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.follow-button:hover {
+    color: black;
+    background-color: #979326;
+}
+.profile {
+    display: inline-block;
+    margin: 0 15px 0 15px;
+}
+.post{
+    display: flex;
+    justify-content: center;
+}
+.post-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+.post-url {
+    text-decoration: none;
+    color: #000000;
+}
+.post-card {
+    margin: 30px auto;
+    width: 250px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+.post-image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #faf437;
+    vertical-align: middle;
+}
+.post-profile-image {
+    margin: 5px 5px 5px 5px;
+}
+.post-name {
+    font-weight: bold;
+}
+.post-card-header-university {
+    background-color: #faf437;
+    display: flex;
+    justify-content: center;
+}
+.post-university {
+    font-weight: bold;
+    margin: 6px 0;
+}
+.post-text {
+    display: flex;
+    justify-content: center;
+}
+.post-help {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 20px 15px;
+}
+.post-desire {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 20px 15px;
+}

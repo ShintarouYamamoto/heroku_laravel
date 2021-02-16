@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    margin: 30px 0 30px 0;
+    width: 560px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+.card-body{
+    margin: 0 20px;
+}
+.image {
+    margin-bottom: 12px;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    border: 7px solid #faf437;
+}
+.text-area {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+.form-group {
+    margin-top: 40px;
+}
+.form-name {
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: 1.5px solid #dcdcdc;
+}
+
+.form-email {
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: 1.5px solid #dcdcdc;
+}
+
+.form-profile {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    border: 1.5px solid #dcdcdc;
+}
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.form-university {
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: 1.5px solid #dcdcdc;
+}
+
+.submit-button {
+    margin-bottom: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    background-color: #faf437;
+    padding: 10px 10px;
+    font-size: 13px;
+    border-style: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    outline: none;
+}
+
+.submit-button:hover {
+    color: black;
+    background-color: #979326;
+}
+.error{
+    color: red;
+    font-weight: bold; 
+}

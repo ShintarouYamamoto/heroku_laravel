@@ -1,0 +1,29 @@
+.card {
+    margin: 30px auto;
+    width: 600px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.card-body-left a{
+    text-decoration: none;
+}
+.card-body-left img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #faf437;
+    vertical-align: middle;
+}
+.card-body-left p {
+    display: inline-block;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 10px;
+}
