@@ -5,9 +5,9 @@
 @include('parts.before_navbar')
 
 @section('css')
+
 <link rel="stylesheet" href="{{ asset('css/top.css') }}">
 @endsection
-
 
 
 @section('content')
