@@ -6,7 +6,7 @@ use App\User;
 use App\Post;
 use App\Reaction;
 use Validator;
-
+use Illuminate\Support\Facades\Storage;
 use Auth;
 
 use Illuminate\Http\Request;
@@ -59,8 +59,9 @@ class UserController extends Controller
         $user->profile = $request->profile;
         $user->sex = $request->sex;
         if ($request->profile_image != null) {
-            $request->profile_image->storeAs('public/user_images', $user->id . '.jpg');
-            $user->profile_image = $user->id . '.jpg';
+            $user_image = $request->file('profile_image');
+            $path = Storage::disk('s3')->put('user_images', $user_image, 'public');
+            $user->profile_image = Storage::disk('s3')->url($path);
         }
         $user->save();
 
@@ -71,19 +72,19 @@ class UserController extends Controller
     }
     public function return()
     {
-        return redirect('/user/'. Auth::user()->id);
+        return redirect('/user/' . Auth::user()->id);
     }
 
     public function news()
     {
         $user = Auth::user();
 
-        $reactions=Reaction::where('to_user_id',$user->id)->where('status',0)->get();
+        $reactions = Reaction::where('to_user_id', $user->id)->where('status', 0)->get();
 
 
         return view('user.news')->with([
             'user' => $user,
-            'reactions'=>$reactions
+            'reactions' => $reactions
         ]);
     }
 }

@@ -31,7 +31,7 @@
 
         <div class="card-body">
             <p class="inline-block">
-                <img class="image" src="{{ asset('storage/user_images/' . $user->profile_image) }}" alt="user" />
+                <img class="image" src="{{ $user->profile_image }}" alt="user" />
             </p>
             <div class="infomation inline-block">
                 <p><i class="fas fa-user fa-fw"></i> {{ $user->name }}</p>
