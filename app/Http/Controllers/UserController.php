@@ -6,7 +6,7 @@ use App\User;
 use App\Post;
 use App\Reaction;
 use Validator;
-use Illuminate\Support\Facades\Storage;
+use Storage;
 use Auth;
 
 use Illuminate\Http\Request;
@@ -60,8 +60,8 @@ class UserController extends Controller
         $user->sex = $request->sex;
         if ($request->profile_image != null) {
             $user_image = $request->file('profile_image');
-            $path = Storage::disk('s3')->put('user_images', $user_image, 'public');
-            $user->profile_image = Storage::disk('s3')->url($path);
+            $path = Storage::disk('s3')->put('/', $user_image, 'public');
+            $user->profile_image = Storage::disk('s3')->url($path);;
         }
         $user->save();
 
