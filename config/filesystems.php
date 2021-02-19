@@ -42,6 +42,7 @@ return [
     */
 
     'disks' => [
+        'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
         'local' => [
             'driver' => 'local',
