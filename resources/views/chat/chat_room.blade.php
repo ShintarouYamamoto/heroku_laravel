@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','タイムライン')
+@section('title','チャットルーム')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/chat/chat_room.css') }}">
@@ -18,7 +18,7 @@
             <div class="card-message-body-left">
                 @if($chatmessage->user_id != Auth::user()->id)
                 <p>
-                    <img src="{{ asset('storage/user_images/' . $chatmessage->user->profile_image) }}" alt="user" />
+                    <img src="{{ $chatmessage->user->profile_image }}" alt="user" />
                 </p>
                 <p class="message">{{ $chatmessage->message }}</p>
                 @endif
@@ -27,7 +27,7 @@
                 @if($chatmessage->user_id == Auth::user()->id)
                 <p class="message">{{ $chatmessage->message }}</p>
                 <p>
-                    <img src="{{ asset('storage/user_images/' . $chatmessage->user->profile_image) }}" alt="user" />
+                    <img src="{{ $chatmessage->user->profile_image }}" alt="user" />
                 </p>
                 @endif
             </div>

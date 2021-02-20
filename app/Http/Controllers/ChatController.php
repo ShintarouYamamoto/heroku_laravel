@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Auth;
-
+use App\Reaction;
 use App\ChatUser;
 use App\ChatMessage;
 
@@ -14,16 +14,11 @@ class ChatController extends Controller
     public function list()
     {
         $user = Auth::user();
-
-        $auth_chatusers = ChatUser::where('user_id', $user->id)->get();
-        foreach ($auth_chatusers as $auth_chatuser) {
-            $chatusers[] =  ChatUser::where('chat_room_id', $auth_chatuser->chat_room_id)
-                ->where('user_id', '!=', $user->id)
-                ->firstOrFail();
-        }
-
+        $to_rooms = Reaction::where('to_user_id', $user->id)->where('status', 1)->get();
+        $from_rooms = Reaction::where('from_user_id', $user->id)->where('status', 1)->get();
         return view('chat.chat_list')->with([
-            'chatusers' => $chatusers
+            'to_rooms' => $to_rooms,
+            'from_rooms' => $from_rooms,
         ]);
     }
 
@@ -55,7 +50,7 @@ class ChatController extends Controller
         $chatmessage->message = $request->message;
         $chatmessage->user_id = Auth::user()->id;
         $chatmessage->save();
-        
+
         return redirect()->back();
     }
 }

@@ -63,7 +63,7 @@
 
                         <div class="post-card-header-name">
                             <p class="post-profile-image inline-block">
-                                <img class="post-image" src="{{ asset('storage/user_images/' . $post->user->profile_image) }}" alt="user" />
+                                <img class="post-image" src="{{ $post->user->profile_image }}" alt="user" />
                             </p>
                             <p class="post-name inline-block">{{ $post->user->name }}</p>
                         </div>

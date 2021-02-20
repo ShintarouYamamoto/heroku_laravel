@@ -32,7 +32,7 @@
                     <p>プロフィール画像</p>
                     @if ($user->profile_image)
                     <p>
-                        <img class="image" src="{{ asset('storage/user_images/' . $user->profile_image) }}" alt="user" />
+                        <img class="image" src="{{ $user->profile_image }}" alt="user" />
                     </p>
                     @endif
                     <input type="file" name="profile_image" value="{{ old('user_profile_image',$user->id) }}" accept="image/jpeg,image/gif,image/png" />

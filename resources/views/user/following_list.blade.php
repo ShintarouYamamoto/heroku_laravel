@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title','タイムライン')
+@section('title','フォローリスト')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/user/follow_list.css') }}">
+<link rel="stylesheet" href="{{ asset('css/user/follow.css') }}">
 @endsection
 
 @include('parts.navbar')
@@ -21,7 +21,7 @@
             <div class="card-body-left">
                 <a href="/user/{{$follow->followersId->id}}">
                     <p class="">
-                        <img class="" src="{{ asset('storage/user_images/' . $follow->followersId->profile_image) }}" alt="user" />
+                        <img class="user-image" src="{{ $follow->followersId->profile_image }}" alt="user" />
                     </p>
                 </a>
                 <p class="">{{ $follow->followersId->name }}</p>

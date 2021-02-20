@@ -20,5 +20,11 @@ class Reaction extends Model
     {
         return $this->belongsTo('App\Post', 'post_id', 'id');
     }
+
+    public function chatId()
+    {
+        return $this->hasOne('App\Chatroom', 'post_id', 'id');
+    }
+
     
 }

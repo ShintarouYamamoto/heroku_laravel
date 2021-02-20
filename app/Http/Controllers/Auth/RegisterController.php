@@ -72,7 +72,7 @@ class RegisterController extends Controller
             'sex' => $data['sex'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'profile_image'=>'sample_user.jpg',
+            'profile_image'=>'https://laravelheroku.s3-ap-northeast-1.amazonaws.com/user_images/4ERU6P5xEi0NDJhqwDSIDmyuKNEKRr8xw9CQEzBQ.jpg',
         ]);
     }
 

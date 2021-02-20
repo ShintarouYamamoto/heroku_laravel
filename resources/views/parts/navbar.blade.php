@@ -14,7 +14,7 @@
 
             <div class="nav-url mypage">
                 <a href="/user/{{ Auth::user()->id }}" class="nav-icon">
-                    <img class="nav-image" src="{{ asset('storage/user_images/' . Auth::user()->profile_image) }}" alt="user" />
+                    <img class="nav-image" src="{{ Auth::user()->profile_image }}" alt="user" />
                 </a>
             </div>
 

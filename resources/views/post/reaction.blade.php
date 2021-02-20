@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','タイムライン')
+@section('title','いいね！リスト')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/post/reaction.css') }}">
@@ -23,7 +23,7 @@
 
             <div class="card-body-left">
                 <p class="">
-                    <img class="" src="{{ asset('storage/user_images/' . $reaction->fromUserId->profile_image) }}" alt="user" />
+                    <img class="" src="{{ $reaction->fromUserId->profile_image }}" alt="user" />
                 </p>
 
                 <p class="">{{ $reaction->fromUserId->name }}</p>

@@ -59,11 +59,16 @@ class UserController extends Controller
         $user->profile = $request->profile;
         $user->sex = $request->sex;
         if ($request->profile_image != null) {
-            $path = $request->file('profile_image')->store('user_images','s3');
-             }
+            $path = $request->file('profile_image');
+            $path = Storage::disk('s3')->putFile('user_images', $path, 'public');
+            $user->profile_image = Storage::disk('s3')->url($path);
+        }
         $user->save();
 
-        return $path;
+        return view('user.edit')->with([
+            'message' => '更新完了',
+            'user' => $user,
+        ]);
     }
     public function return()
     {

@@ -29,7 +29,7 @@
             <div class="card">
 
                 <div class="card-header-name">
-                    <p class="profile-image inline-block"><img class="image" src="{{ asset('storage/user_images/' . $post->user->profile_image) }}" alt="user" /></p>
+                    <p class="profile-image inline-block"><img class="image" src="{{ $post->user->profile_image }}" alt="user" /></p>
                     <p class="name inline-block">{{ $post->user->name }}</p>
                 </div>
 
