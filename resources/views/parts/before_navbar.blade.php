@@ -5,7 +5,9 @@
 
         <div class="nav-container-left">
             <div class="nav-rogo">
-                <a href="/" class="rogo"><p>ACCORD</p></a>
+                <a href="/" class="rogo">
+                    <p>ACCORD</p>
+                </a>
             </div>
         </div>
 
@@ -18,6 +20,20 @@
             <div class="nav-url nav-register">
                 <a href="/register" class="nav-button">新規登録</a>
             </div>
+
+            <div class="nav-url nav-guest">
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <input type="hidden" class="form-email" name="email" value="thirdman_shin@yahoo.co.jp" autocomplete="email">
+
+                    <input type="hidden" class="form-password" name="password" value="shin0929" autocomplete="current-password">
+
+                    <button type="submit" class="nav-button">
+                        ゲスト
+                    </button>
+                </form>
+            </div>
+
 
         </div>
 
