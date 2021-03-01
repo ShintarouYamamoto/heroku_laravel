@@ -10,7 +10,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="page-container">
 
     <div class="card">
 

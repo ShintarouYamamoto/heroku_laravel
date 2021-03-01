@@ -66,10 +66,10 @@
     background-color: #faf437;
     padding: 10px 10px;
     font-size: 13px;
-    border-style: none;
+    border-style: none !important;
     border-radius: 10px;
     transition: 0.5s;
-    outline: none;
+    outline: none !important;;
 }
 
 .submit-button:hover {

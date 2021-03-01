@@ -2,7 +2,6 @@
 
 @section('title','トップページ')
 
-@include('parts.before_navbar')
 
 @section('css')
 
@@ -12,7 +11,9 @@
 
 @section('content')
 
-<div class="container">
+@include('parts.before_navbar')
+
+<div class="page-container">
 
     <div class="introduce">
         <img src="{{ asset('/images/background1.jpg') }}" alt="">
@@ -22,11 +23,11 @@
         <p class="text4">ただ、その時は自分も相手を助けよう。</p>
     </div>
 
-    <div class="card-container">
+    <div class="card-container row">
 
         @foreach ($posts as $post)
-        <a href="timeline/{{ $post->id }}">
-            <div class="card">
+        <div class="card col-sm-10 col-md-4 col-lg-3">
+            <a href="timeline/{{ $post->id }}">
 
                 <div class="card-header-name">
                     <p class="profile-image inline-block"><img class="image" src="{{ $post->user->profile_image }}" alt="user" /></p>
@@ -51,8 +52,8 @@
                     </div>
                 </div>
 
-            </div>
-        </a>
+            </a>
+        </div>
         @endforeach
     </div>
 </div>
