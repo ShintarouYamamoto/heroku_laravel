@@ -29,7 +29,7 @@ class Post extends Model
   
   public function postId()
   {
-    return $this->hasMany('App\Post', 'post_id', 'id');
+    return $this->hasMany('App\Reaction', 'post_id', 'id');
   }
   
   public function reactionBy($post_id)

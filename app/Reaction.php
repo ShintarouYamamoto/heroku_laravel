@@ -23,8 +23,6 @@ class Reaction extends Model
 
     public function chatId()
     {
-        return $this->hasOne('App\Chatroom', 'post_id', 'id');
+        return $this->hasOne('App\Chatroom', 'post_id', 'post_id');
     }
-
-    
 }
